@@ -23,6 +23,10 @@ class Transaction {
   /**
    * What gets hashed and signed must be deterministic.
    * Signature is NOT included in the hash (otherwise infinite recursion).
+   * Transaction is Stateful object
+   * Thats why first we initialize using constructor
+   * const tx = new Transaction(...);
+   * tx.hash()
    */
   hash() {
     return sha256(
