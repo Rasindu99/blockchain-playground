@@ -65,6 +65,13 @@ class Ledger {
 
     return true;
   }
+
+  applyBlock(block) {
+    for (const tx of block.transactions) {
+      this.applyTransaction(tx);
+    }
+  }
+  
 }
 
 module.exports = { Ledger };
