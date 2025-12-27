@@ -2,6 +2,7 @@
 const { Block } = require("./block");
 
 class Blockchain {
+  // once the initial blockchain created , it cretaed with genesis block
   constructor() {
     this.chain = [this.createGenesisBlock()];
   }
